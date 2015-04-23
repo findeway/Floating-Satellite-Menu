@@ -6,9 +6,9 @@
         <enum name="left_bottom" value="2" />
         <enum name="right_bottom" value="3" />
     </attr>
-    
+
     <attr name="radius" format="dimension" />
-    
+
     <declare-styleable name="SatelliteMenu">
         <attr name="position" />
         <attr name="radius" />
