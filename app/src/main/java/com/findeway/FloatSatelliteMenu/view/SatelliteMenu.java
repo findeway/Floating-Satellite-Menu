@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 
 import com.findeway.FloatSatelliteMenu.R;
@@ -253,7 +254,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
         if (mSwitchButton != null) {
             rotateSwitchButton(mSwitchButton, 0f, 360f, duration);
         }
-        doChildrenAnimation(duration);
+        doChildrenToggleAnimation(duration);
     }
     /**
      * rotate switch button
@@ -279,7 +280,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
      * start menu items animation
      * @param duration
      */
-    protected void doChildrenAnimation(int duration){
+    protected void doChildrenToggleAnimation(int duration){
         int childCount = getChildCount();
         for(int childIndex = 1; childIndex < childCount; childIndex++){
             AnimationSet animationSet = new AnimationSet(true);
@@ -325,6 +326,30 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
     }
 
     /**
+     * show animation when item clicked
+     */
+    protected void doMenuItemClickAnimation(int targetChildIndex){
+        ScaleAnimation targetAnimation = new ScaleAnimation(1f,1.5f,1f,1.5f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        targetAnimation.setDuration(300);
+        targetAnimation.setFillAfter(true);
+        View targetChildView = getChildAt(targetChildIndex);
+        if(targetChildView != null) {
+            targetChildView.startAnimation(targetAnimation);
+        }
+        for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
+            if(childIndex != targetChildIndex){
+                ScaleAnimation scaleSmallnimation = new ScaleAnimation(1f,0.8f,1f,0.8f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+                scaleSmallnimation.setDuration(300);
+                scaleSmallnimation.setFillAfter(true);
+                View childView = getChildAt(childIndex);
+                if(childView != null) {
+                    childView.startAnimation(scaleSmallnimation);
+                }
+            }
+        }
+    }
+
+    /**
      * update menu items' visibility and clickable attribute;
      */
     private void updateMenuItemsStatus(){
@@ -343,6 +368,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
                     if(mMenuItemClickListener != null) {
                         mMenuItemClickListener.OnMenuItemClick(finalChildIndex);
                     }
+                    doMenuItemClickAnimation(finalChildIndex);
                     hideMenuItems();
                 }
             });
