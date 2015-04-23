@@ -332,8 +332,24 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
         ScaleAnimation targetAnimation = new ScaleAnimation(1f,1.5f,1f,1.5f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
         targetAnimation.setDuration(300);
         targetAnimation.setFillAfter(true);
-        View targetChildView = getChildAt(targetChildIndex);
+        final View targetChildView = getChildAt(targetChildIndex);
         if(targetChildView != null) {
+            targetAnimation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    targetChildView.clearAnimation();
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
             targetChildView.startAnimation(targetAnimation);
         }
         for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
@@ -341,16 +357,26 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
                 ScaleAnimation scaleSmallnimation = new ScaleAnimation(1f,0.8f,1f,0.8f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
                 scaleSmallnimation.setDuration(300);
                 scaleSmallnimation.setFillAfter(true);
-                View childView = getChildAt(childIndex);
+                final View childView = getChildAt(childIndex);
                 if(childView != null) {
+                    scaleSmallnimation.setAnimationListener(new Animation.AnimationListener() {
+                        @Override
+                        public void onAnimationStart(Animation animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animation animation) {
+                            childView.clearAnimation();
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animation animation) {
+
+                        }
+                    });
                     childView.startAnimation(scaleSmallnimation);
                 }
-            }
-        }
-        for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
-            View childView = getChildAt(childIndex);
-            if(childView != null) {
-                childView.clearAnimation();
             }
         }
     }
