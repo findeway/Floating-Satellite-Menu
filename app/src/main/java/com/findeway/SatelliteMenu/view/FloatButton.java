@@ -3,7 +3,6 @@ package com.findeway.SatelliteMenu.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +17,8 @@ public class FloatButton extends ImageButton {
 
     private float mPosX = 0;
     private float mPosY = 0;
+
+    private boolean mClickEnabledFlag = true;
 
     private OnPositionUpdateListener mPositionListener = null;
 
@@ -59,6 +60,14 @@ public class FloatButton extends ImageButton {
         return dm.widthPixels;
     }
 
+    protected void setClickEnabled(boolean enabled){
+        mClickEnabledFlag = enabled;
+    }
+
+    protected boolean isClickEnabled(){
+        return mClickEnabledFlag;
+    }
+
     private void registerMouseListener() {
         setOnTouchListener(new OnTouchListener() {
             @Override
@@ -67,12 +76,20 @@ public class FloatButton extends ImageButton {
                     case MotionEvent.ACTION_DOWN: {
                         mPosX = motionEvent.getRawX();
                         mPosY = motionEvent.getRawY();
+                        setClickEnabled(true);
                     }
                     case MotionEvent.ACTION_MOVE: {
                         int dx = (int) ((int) motionEvent.getRawX() - mPosX);
                         int dy = (int) ((int) motionEvent.getRawY() - mPosY);
                         updatePosition(view, dx, dy);
-                        break;
+                        setClickEnabled(dx == 0 && dy == 0);
+                    }
+                    case MotionEvent.ACTION_UP:{
+                        if(isClickEnabled()) {
+                            return false;
+                        }else {
+                            return true;
+                        }
                     }
                 }
                 return false;
