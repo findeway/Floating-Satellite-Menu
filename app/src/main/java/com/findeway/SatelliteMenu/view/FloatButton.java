@@ -19,6 +19,8 @@ public class FloatButton extends ImageButton {
     private float mPosX = 0;
     private float mPosY = 0;
 
+    private OnPositionUpdateListener mPositionListener = null;
+
     public FloatButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
@@ -31,41 +33,45 @@ public class FloatButton extends ImageButton {
         this(context, null, 0);
     }
 
-    public void initFloatButton(int padding){
-        mPadding = padding;
-        registerMouseListener();
+    public void setOnPositionUpdateListener(OnPositionUpdateListener listener){
+        mPositionListener = listener;
     }
 
-    public void initFloatButton(){
+    public void initFloatButton(int padding) {
+        mPadding = padding;
+        registerMouseListener();
+        updatePosition(this,0,0);
+    }
+
+    public void initFloatButton() {
         initFloatButton(mPadding);
     }
 
-    private int getScreenHeight(){
+    private int getScreenHeight() {
         DisplayMetrics dm = getResources().getDisplayMetrics();
-        int appHeaderHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());;
+        int appHeaderHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics());
+        ;
         return dm.heightPixels - appHeaderHeight;
     }
 
-    private int getScreenWidth(){
+    private int getScreenWidth() {
         DisplayMetrics dm = getResources().getDisplayMetrics();
         return dm.widthPixels;
     }
 
-    private void registerMouseListener(){
+    private void registerMouseListener() {
         setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 switch (motionEvent.getAction()) {
-                    case MotionEvent.ACTION_DOWN:{
+                    case MotionEvent.ACTION_DOWN: {
                         mPosX = motionEvent.getRawX();
                         mPosY = motionEvent.getRawY();
                     }
                     case MotionEvent.ACTION_MOVE: {
                         int dx = (int) ((int) motionEvent.getRawX() - mPosX);
                         int dy = (int) ((int) motionEvent.getRawY() - mPosY);
-                        updatePosition(view,dx,dy);
-                        mPosX = motionEvent.getRawX();
-                        mPosY = motionEvent.getRawY();
+                        updatePosition(view, dx, dy);
                         break;
                     }
                 }
@@ -74,9 +80,7 @@ public class FloatButton extends ImageButton {
         });
     }
 
-    protected void updatePosition(View view,int moveX,int moveY){
-        Log.i("x", String.valueOf(moveX));
-        Log.i("y", String.valueOf(moveY));
+    protected void updatePosition(View view, int moveX, int moveY) {
         int left = view.getLeft() + moveX;
         int top = view.getTop() + moveY;
         int right = view.getRight() + moveX;
@@ -103,7 +107,17 @@ public class FloatButton extends ImageButton {
             top = bottom - view.getHeight();
         }
         // update position of view
-        view.layout(left, top,right,bottom);
+        view.layout(left, top, right, bottom);
         view.postInvalidate();
+
+        mPosX += moveX;
+        mPosY += moveY;
+        if(mPositionListener != null){
+            mPositionListener.onPositionUpdate(mPosX,mPosY);
+        }
+    }
+
+    public interface OnPositionUpdateListener{
+        public void onPositionUpdate(float posX, float posY);
     }
 }
