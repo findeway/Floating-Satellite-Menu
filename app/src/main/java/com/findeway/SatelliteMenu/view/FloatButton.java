@@ -33,14 +33,14 @@ public class FloatButton extends ImageButton {
         this(context, null, 0);
     }
 
-    public void setOnPositionUpdateListener(OnPositionUpdateListener listener){
+    public void setOnPositionUpdateListener(OnPositionUpdateListener listener) {
         mPositionListener = listener;
     }
 
     public void initFloatButton(int padding) {
         mPadding = padding;
         registerMouseListener();
-        updatePosition(this,0,0);
+        updatePosition(this, 0, 0);
     }
 
     public void initFloatButton() {
@@ -75,7 +75,7 @@ public class FloatButton extends ImageButton {
                         break;
                     }
                 }
-                return true;
+                return false;
             }
         });
     }
@@ -112,12 +112,12 @@ public class FloatButton extends ImageButton {
 
         mPosX += moveX;
         mPosY += moveY;
-        if(mPositionListener != null){
-            mPositionListener.onPositionUpdate(mPosX,mPosY);
+        if (mPositionListener != null) {
+            mPositionListener.onPositionUpdate(mPosX, mPosY);
         }
     }
 
-    public interface OnPositionUpdateListener{
+    public interface OnPositionUpdateListener {
         public void onPositionUpdate(float posX, float posY);
     }
 }

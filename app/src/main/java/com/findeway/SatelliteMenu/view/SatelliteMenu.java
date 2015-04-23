@@ -6,13 +6,17 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
+import android.view.animation.TranslateAnimation;
 
 import com.findeway.SatelliteMenu.R;
 
 /**
  * Created by Qing on 2015/4/22.
  */
-public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUpdateListener,View.OnClickListener {
+public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUpdateListener, View.OnClickListener {
 
     public enum MenuPosition {
         MenuPosition_LT(0),
@@ -70,7 +74,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
     /**
      * initial position of SatelliteMenu
      */
-    private MenuPosition mPosition = MenuPosition.MenuPosition_RB;
+    private MenuPosition mSwitchPosition = MenuPosition.MenuPosition_RB;
 
     /**
      * indicates that menu is expanded or not
@@ -84,6 +88,8 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
 
     private FloatButton mSwitchButton = null;
 
+    private OnMenuItemClickListener mMenuItemClickListener = null;
+
     public SatelliteMenu(Context context) {
         this(context, null, 0);
     }
@@ -94,10 +100,33 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
 
     public SatelliteMenu(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        mRadius = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 100, getResources().getDisplayMetrics());
+        mRadius = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 150, getResources().getDisplayMetrics());
         TypedArray attributeArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.SatelliteMenu, defStyleAttr, 0);
-        mPosition = MenuPosition.fromInt(attributeArray.getInt(R.styleable.SatelliteMenu_position, MenuPosition.MenuPosition_RB.getValue()));
+        mSwitchPosition = MenuPosition.fromInt(attributeArray.getInt(R.styleable.SatelliteMenu_position, MenuPosition.MenuPosition_RB.getValue()));
         attributeArray.recycle();
+    }
+
+    /**
+     * indicates that satellitemenu is closed or expanded
+     * @return
+     */
+    public boolean isMenuClosed(){
+        return mStatus == MenuStatus.MenuState_Closed;
+    }
+
+    protected void initMenuItems(){
+        registerChildClickListener();
+        updateMenuItemsStatus();
+    }
+
+    public void setOnMenuItemClickListener(OnMenuItemClickListener listener){
+        mMenuItemClickListener = listener;
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        initMenuItems();
     }
 
     @Override
@@ -119,8 +148,9 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
         }
     }
 
-    protected void initSwitchButton(){
-        if(mSwitchButton == null){
+    //initizlization can be done for only once;
+    protected void initSwitchButton() {
+        if (mSwitchButton == null) {
             mSwitchButton = (FloatButton) getChildAt(0);
             mSwitchButton.setOnPositionUpdateListener(this);
             mSwitchButton.initFloatButton();
@@ -135,7 +165,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
             int top = 0;
             int measuredButtonWidth = mSwitchButton.getMeasuredWidth();
             int measuredButtonHeight = mSwitchButton.getMeasuredHeight();
-            switch (mPosition) {
+            switch (mSwitchPosition) {
                 case MenuPosition_LT: {
                     left = 0;
                     top = 0;
@@ -161,7 +191,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
         }
     }
 
-    protected void updateChildrenLayout(){
+    protected void updateChildrenLayout() {
         int childCount = getChildCount();
         for (int childIndex = 1; childIndex < childCount; childIndex++) {
             View childView = getChildAt(childIndex);
@@ -171,17 +201,17 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
             int childHeight = childView.getMeasuredHeight();
 
             //calcute position of y-coordinate
-            if (mPosition == MenuPosition.MenuPosition_LB || mPosition == MenuPosition.MenuPosition_RB) {
-                childTop = (mSwitchButton.getTop() + mSwitchButton.getBottom() )/2 - childHeight - childTop;
+            if (mSwitchPosition == MenuPosition.MenuPosition_LB || mSwitchPosition == MenuPosition.MenuPosition_RB) {
+                childTop = mSwitchButton.getBottom() - childHeight - childTop;
             } else {
-                childTop = (mSwitchButton.getTop() + mSwitchButton.getBottom() )/2 + childTop;
+                childTop = mSwitchButton.getTop() + childTop;
             }
 
             //calcute position of y-coordinate
-            if (mPosition == MenuPosition.MenuPosition_RT || mPosition == MenuPosition.MenuPosition_RB) {
-                childLeft = (mSwitchButton.getLeft() + mSwitchButton.getRight())/2 - childWidth - childLeft;
+            if (mSwitchPosition == MenuPosition.MenuPosition_RT || mSwitchPosition == MenuPosition.MenuPosition_RB) {
+                childLeft = mSwitchButton.getRight() - childWidth - childLeft;
             } else {
-                childLeft = (mSwitchButton.getLeft() + mSwitchButton.getRight())/2 + childLeft;
+                childLeft = mSwitchButton.getLeft() + childLeft;
             }
 
             childView.layout(childLeft, childTop, childLeft + childWidth, childTop + childHeight);
@@ -190,21 +220,123 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
 
     @Override
     public void onClick(View view) {
-
+        doToggleAnimation(300);
+        //expand or close satellite [ppmenu;
+        toggleMenu();
+        updateMenuItemsStatus();
     }
 
     @Override
     public void onPositionUpdate(float posX, float posY) {
-        if(posX <= this.getMeasuredWidth() / 2 && posY <= this.getMeasuredHeight() / 2){
-            mPosition = MenuPosition.MenuPosition_LT;
-        }else if(posX > this.getMeasuredWidth() / 2 && posY <= this.getMeasuredHeight() / 2){
-            mPosition = MenuPosition.MenuPosition_RT;
-        }else if(posX <= this.getMeasuredWidth() / 2 && posY > this.getMeasuredHeight() / 2){
-            mPosition = MenuPosition.MenuPosition_LB;
-        }else if(posX > this.getMeasuredWidth() / 2 && posY > this.getMeasuredHeight() / 2){
-            mPosition = MenuPosition.MenuPosition_RB;
+        if (posX <= this.getMeasuredWidth() / 2 && posY <= this.getMeasuredHeight() / 2) {
+            mSwitchPosition = MenuPosition.MenuPosition_LT;
+        } else if (posX > this.getMeasuredWidth() / 2 && posY <= this.getMeasuredHeight() / 2) {
+            mSwitchPosition = MenuPosition.MenuPosition_RT;
+        } else if (posX <= this.getMeasuredWidth() / 2 && posY > this.getMeasuredHeight() / 2) {
+            mSwitchPosition = MenuPosition.MenuPosition_LB;
+        } else if (posX > this.getMeasuredWidth() / 2 && posY > this.getMeasuredHeight() / 2) {
+            mSwitchPosition = MenuPosition.MenuPosition_RB;
         }
         updateChildrenLayout();
+    }
+
+    protected void doToggleAnimation(int duration){
+        if (mSwitchButton != null) {
+            rotateSwitchButton(mSwitchButton, 0f, 360f, duration);
+        }
+        doChildrenAnimation(duration);
+    }
+    /**
+     * rotate switch button
+     *
+     * @param view     target view
+     * @param start    start angle
+     * @param end      end angle
+     * @param duration time for rotation
+     */
+    protected void rotateSwitchButton(View view, float start, float end, int duration) {
+        RotateAnimation animation = new RotateAnimation(start, end, Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        animation.setDuration(duration);
+        animation.setFillAfter(true);
+        view.startAnimation(animation);
+    }
+
+    private void toggleMenu() {
+        //update menu status
+        mStatus = isMenuClosed() ? MenuStatus.MenuState_Opened : MenuStatus.MenuState_Closed;
+    }
+
+    /**
+     * start menu items animation
+     * @param duration
+     */
+    protected void doChildrenAnimation(int duration){
+        int childCount = getChildCount();
+        for(int childIndex = 1; childIndex < childCount; childIndex++){
+            AnimationSet animationSet = new AnimationSet(true);
+            //rotate
+            RotateAnimation rotateAnimation = new RotateAnimation(0f, 720f, Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+            rotateAnimation.setDuration(duration);
+            rotateAnimation.setFillAfter(true);
+            animationSet.addAnimation(rotateAnimation);
+            //translate
+            TranslateAnimation translateAnimation = null;
+            int childLeft = (int) (mRadius * Math.sin(Math.PI / 2 / (childCount - 2) * (childIndex - 1)));
+            int childTop = (int) (mRadius * Math.cos(Math.PI / 2 / (childCount - 2) * (childIndex - 1)));
+
+            //move direction
+            int xDirection = 1;
+            int yDirection = 1;
+            if(mSwitchPosition == MenuPosition.MenuPosition_LT || mSwitchPosition == MenuPosition.MenuPosition_LB){
+                xDirection = -1;
+            }
+            if(mSwitchPosition == MenuPosition.MenuPosition_LT || mSwitchPosition == MenuPosition.MenuPosition_RT) {
+                yDirection = -1;
+            }
+            int endX = 0;
+            int endY = 0;
+            int deltaX = mSwitchButton.getWidth() / 2;
+            int deltaY = mSwitchButton.getHeight() / 2;
+
+            if(isMenuClosed()){
+                //to expand
+                translateAnimation = new TranslateAnimation(endX + xDirection * childLeft - xDirection * deltaX,endX, endY + yDirection* childTop - yDirection * deltaY, endY);
+            }else{
+                //to close
+                translateAnimation = new TranslateAnimation(endX, xDirection * childLeft + endX - xDirection* deltaX, endY,endY + yDirection* childTop - yDirection*deltaY);
+            }
+            translateAnimation.setDuration(duration);
+            translateAnimation.setFillAfter(true);
+            translateAnimation.setStartOffset(childIndex * 100 / childCount);
+            animationSet.addAnimation(translateAnimation);
+            //start animation
+            getChildAt(childIndex).startAnimation(animationSet);
+
+        }
+    }
+
+    /**
+     * update menu items' visibility and clickable attribute;
+     */
+    private void updateMenuItemsStatus(){
+        for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
+            getChildAt(childIndex).setVisibility(isMenuClosed()?GONE:VISIBLE);
+            getChildAt(childIndex).setClickable(isMenuClosed() ? false : true);
+        }
+    }
+
+    protected void registerChildClickListener(){
+        for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
+            final int finalChildIndex = childIndex;
+            getChildAt(childIndex).setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(mMenuItemClickListener != null){
+                        mMenuItemClickListener.OnMenuItemClick(finalChildIndex);
+                    }
+                }
+            });
+        }
     }
 
     public interface OnMenuItemClickListener {
