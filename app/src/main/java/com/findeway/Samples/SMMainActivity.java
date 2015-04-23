@@ -1,4 +1,4 @@
-package com.findeway.FloatSatelliteMenu.Samples;
+package com.findeway.Samples;
 
 import android.app.Activity;
 import android.os.Bundle;

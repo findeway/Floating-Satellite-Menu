@@ -347,6 +347,12 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
                 }
             }
         }
+        for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
+            View childView = getChildAt(childIndex);
+            if(childView != null) {
+                childView.clearAnimation();
+            }
+        }
     }
 
     /**
@@ -354,8 +360,8 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
      */
     private void updateMenuItemsStatus(){
         for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
-            getChildAt(childIndex).setVisibility(isMenuClosed()?GONE:VISIBLE);
             getChildAt(childIndex).setClickable(isMenuClosed() ? false : true);
+            getChildAt(childIndex).setVisibility(isMenuClosed()?GONE:VISIBLE);
         }
     }
 
