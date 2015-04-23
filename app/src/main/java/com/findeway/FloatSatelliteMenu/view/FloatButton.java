@@ -13,12 +13,43 @@ import android.widget.ImageButton;
  */
 public class FloatButton extends ImageButton {
 
+    public enum FloatPosition {
+        FloatPosition_LT(0),
+        FloatPosition_RT(1),
+        FloatPosition_LB(2),
+        FloatPosition_RB(3);
+
+        /**
+         * convert between MenuPosition and int
+         */
+        private int _value = 3;
+
+        FloatPosition(int value) {
+            _value = value;
+        }
+
+        public int getValue() {
+            return _value;
+        }
+
+        public static FloatPosition fromInt(int value) {
+            for (FloatPosition position : FloatPosition.values()) {
+                if (position.getValue() == value) {
+                    return position;
+                }
+            }
+            return null;
+        }
+    }
+
     private int mPadding = 5;
 
     private float mPosX = 0;
     private float mPosY = 0;
 
     private boolean mClickEnabledFlag = true;
+
+    private FloatPosition mPosition = FloatPosition.FloatPosition_RB;
 
     private OnPositionUpdateListener mPositionListener = null;
 
@@ -38,10 +69,25 @@ public class FloatButton extends ImageButton {
         mPositionListener = listener;
     }
 
-    public void initFloatButton(int padding) {
+    public void initFloatButton(int padding, FloatPosition position) {
         mPadding = padding;
+        mPosition = position;
         registerMouseListener();
-        updatePosition(this, 0, 0);
+
+        int moveX = 0;
+        int moveY = 0;
+
+        if(mPosition == FloatPosition.FloatPosition_RB || mPosition == FloatPosition.FloatPosition_RT){
+            moveX = getScreenWidth();
+        }
+        if(mPosition == FloatPosition.FloatPosition_LB || mPosition == FloatPosition.FloatPosition_RB){
+            moveY = getScreenHeight();
+        }
+        updatePosition(this, moveX, moveY);
+    }
+
+    public void initFloatButton(int padding){
+        initFloatButton(padding,FloatPosition.FloatPosition_RB);
     }
 
     public void initFloatButton() {
