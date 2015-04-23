@@ -5,7 +5,7 @@ android {
     buildToolsVersion '19.1.0'
 
     defaultConfig {
-        applicationId "com.findeway.SatelliteMenu"
+        applicationId "com.findeway.FloatSatelliteMenu"
         minSdkVersion 17
         targetSdkVersion 21
         versionCode 1

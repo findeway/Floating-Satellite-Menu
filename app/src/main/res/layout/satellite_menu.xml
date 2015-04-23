@@ -4,13 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.findeway.SatelliteMenu.view.SatelliteMenu
+    <com.findeway.FloatSatelliteMenu.view.SatelliteMenu
+        android:id="@+id/satelliteMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         samenu:position="right_bottom"
         samenu:radius="100dp">
 
-        <com.findeway.SatelliteMenu.view.FloatButton
+        <com.findeway.FloatSatelliteMenu.view.FloatButton
             android:id="@+id/satelliteMainButton"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -41,5 +42,5 @@
             android:layout_height="30dp"
             android:background="@drawable/gblue_button"
             android:tag="item3" />
-    </com.findeway.SatelliteMenu.view.SatelliteMenu>
+    </com.findeway.FloatSatelliteMenu.view.SatelliteMenu>
 </RelativeLayout>

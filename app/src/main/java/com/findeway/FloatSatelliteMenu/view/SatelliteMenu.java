@@ -1,4 +1,4 @@
-package com.findeway.SatelliteMenu.view;
+package com.findeway.FloatSatelliteMenu.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -11,7 +11,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 
-import com.findeway.SatelliteMenu.R;
+import com.findeway.FloatSatelliteMenu.R;
 
 /**
  * Created by Qing on 2015/4/22.
@@ -72,7 +72,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
     }
 
     /**
-     * initial position of SatelliteMenu
+     * initial position of FloatSatelliteMenu
      */
     private MenuPosition mSwitchPosition = MenuPosition.MenuPosition_RB;
 
@@ -220,9 +220,18 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
 
     @Override
     public void onClick(View view) {
+        toggleMenu();
+    }
+
+    protected void toggleMenu(){
         doToggleAnimation(300);
         //expand or close satellite [ppmenu;
-        toggleMenu();
+        updateMenuStatus();
+        updateMenuItemsStatus();
+    }
+
+    protected void hideMenuItems(){
+        updateMenuStatus();
         updateMenuItemsStatus();
     }
 
@@ -261,7 +270,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
         view.startAnimation(animation);
     }
 
-    private void toggleMenu() {
+    private void updateMenuStatus() {
         //update menu status
         mStatus = isMenuClosed() ? MenuStatus.MenuState_Opened : MenuStatus.MenuState_Closed;
     }
@@ -331,9 +340,10 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
             getChildAt(childIndex).setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(mMenuItemClickListener != null){
+                    if(mMenuItemClickListener != null) {
                         mMenuItemClickListener.OnMenuItemClick(finalChildIndex);
                     }
+                    hideMenuItems();
                 }
             });
         }

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SatelliteMenu.iml" filepath="$PROJECT_DIR$/SatelliteMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/satellitemenu.iml" filepath="$PROJECT_DIR$/satellitemenu.iml" />
     </modules>
   </component>
 </project>
