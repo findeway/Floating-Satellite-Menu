@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.RotateAnimation;
@@ -318,6 +319,13 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
             translateAnimation.setFillAfter(true);
             translateAnimation.setStartOffset(childIndex * 100 / childCount);
             animationSet.addAnimation(translateAnimation);
+
+            float startAlpha = isMenuClosed()?0f:1f;
+            float endAlpha = isMenuClosed()?1f:0f;
+            AlphaAnimation alphaAnimation = new AlphaAnimation(startAlpha,endAlpha);
+            alphaAnimation.setFillAfter(true);
+            alphaAnimation.setDuration(duration);
+            animationSet.addAnimation(alphaAnimation);
             //start animation
             childView.startAnimation(animationSet);
 

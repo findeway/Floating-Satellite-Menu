@@ -11,70 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdabccc3-ff2e-4f3c-a502-8d24485bc2f9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/src/androidTest/java/com/findeway/floatingsatellitemenu/ApplicationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/src/main/java/com/findeway/floatingsatellitemenu/SatelliteMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/floatingsatellitemenu.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/proguard-rules.pro" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/floatingsatellitemenu/src/main/res/values/strings.xml" />
-      <change type="DELETED" beforePath="E:\workspace\Android\SatelliteMenu\SatelliteMenu.iml" afterPath="" />
-      <change type="DELETED" beforePath="E:\workspace\Android\SatelliteMenu\floatingsatellitemenu\src\main\java\com\findeway\FloatingSatelliteMenu\view\SatelliteMenu.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\.gitignore" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/.gitignore" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\app.iml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/FloatingSatelliteMenu-Samples.iml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\build.gradle" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/build.gradle" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\proguard-rules.pro" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/proguard-rules.pro" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\androidTest\java\com\findeway\FloatSatelliteMenu\ApplicationTest.java" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/androidTest/java/com/findeway/floatingsatellitemenu/ApplicationTest.java" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\AndroidManifest.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/AndroidManifest.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\java\com\findeway\FloatSatelliteMenu\view\FloatButton.java" afterPath="$PROJECT_DIR$/floatingsatellitemenu/src/main/java/com/findeway/floatingsatellitemenu/FloatButton.java" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\java\com\findeway\Samples\SMMainActivity.java" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/java/com/findeway/floatingsatellitemenu/Samples/SMMainActivity.java" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-hdpi\ic_float_btn.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-hdpi/ic_float_btn.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-hdpi\ic_float_btn_blue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-hdpi/ic_float_btn_blue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-hdpi\ic_float_btn_gblue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-hdpi/ic_float_btn_gblue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-hdpi\ic_float_btn_green.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-hdpi/ic_float_btn_green.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-hdpi\ic_float_btn_yellow.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-hdpi/ic_float_btn_yellow.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-hdpi\ic_float_btn_ygreen.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-hdpi/ic_float_btn_ygreen.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-mdpi\ic_float_btn.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-mdpi/ic_float_btn.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-mdpi\ic_float_btn_blue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-mdpi/ic_float_btn_blue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-mdpi\ic_float_btn_gblue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-mdpi/ic_float_btn_gblue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-mdpi\ic_float_btn_green.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-mdpi/ic_float_btn_green.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-mdpi\ic_float_btn_yellow.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-mdpi/ic_float_btn_yellow.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-mdpi\ic_float_btn_ygreen.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-mdpi/ic_float_btn_ygreen.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xhdpi\ic_float_btn.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xhdpi/ic_float_btn.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xhdpi\ic_float_btn_blue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xhdpi/ic_float_btn_blue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xhdpi\ic_float_btn_gblue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xhdpi/ic_float_btn_gblue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xhdpi\ic_float_btn_green.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xhdpi/ic_float_btn_green.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xhdpi\ic_float_btn_yellow.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xhdpi/ic_float_btn_yellow.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xhdpi\ic_float_btn_ygreen.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xhdpi/ic_float_btn_ygreen.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xxhdpi\ic_float_btn.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xxhdpi/ic_float_btn.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xxhdpi\ic_float_btn_blue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xxhdpi/ic_float_btn_blue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xxhdpi\ic_float_btn_gblue.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xxhdpi/ic_float_btn_gblue.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xxhdpi\ic_float_btn_green.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xxhdpi/ic_float_btn_green.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xxhdpi\ic_float_btn_yellow.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xxhdpi/ic_float_btn_yellow.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable-xxhdpi\ic_float_btn_ygreen.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable-xxhdpi/ic_float_btn_ygreen.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable\blue_button.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable/blue_button.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable\gblue_button.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable/gblue_button.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable\green_button.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable/green_button.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable\switch_button.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable/switch_button.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable\yellow_button.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable/yellow_button.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\drawable\ygreen_button.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/drawable/ygreen_button.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\layout\activity_smmain.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/layout/activity_smmain.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\layout\satellite_menu.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/layout/satellite_menu.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\mipmap-hdpi\ic_launcher.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\mipmap-mdpi\ic_launcher.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\mipmap-xhdpi\ic_launcher.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\mipmap-xxhdpi\ic_launcher.png" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\values-w820dp\dimens.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/values-w820dp/dimens.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\values\attrs.xml" afterPath="$PROJECT_DIR$/floatingsatellitemenu/src/main/res/values/attrs.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\values\dimens.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/values/dimens.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\values\strings.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/values/strings.xml" />
-      <change type="MOVED" beforePath="E:\workspace\Android\SatelliteMenu\app\src\main\res\values\styles.xml" afterPath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/values/styles.xml" />
     </list>
     <ignored path="satellitemenu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,14 +41,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SMMainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SMMainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/java/com/findeway/floatingsatellitemenu/Samples/SMMainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9406953">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="floatingsatellitemenu.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/floatingsatellitemenu/floatingsatellitemenu.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SatelliteMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/floatingsatellitemenu/src/main/java/com/findeway/floatingsatellitemenu/SatelliteMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="322" column="52" selection-start-line="322" selection-start-column="52" selection-end-line="322" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modules.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20353982">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlphaAnimation.class" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/AndroidSDK/platforms/android-17/android.jar!/android/view/animation/AlphaAnimation.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.44">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,31 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FloatingSatelliteMenu-Samples.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/FloatingSatelliteMenu-Samples.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="proguard-rules.pro" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/proguard-rules.pro">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gradle.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2793,11 +2754,13 @@
         <option value="$PROJECT_DIR$/floatingsatellitemenu/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/java/com/findeway/FloatingSatelliteMenu/Samples/SMMainActivity.java" />
         <option value="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/build/generated/source/r/debug/com/findeway/FloatingSatelliteMenu/R.java" />
-        <option value="$PROJECT_DIR$/floatingsatellitemenu/src/main/java/com/findeway/floatingsatellitemenu/SatelliteMenu.java" />
         <option value="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/layout/satellite_menu.xml" />
         <option value="$PROJECT_DIR$/floatingsatellitemenu/build/generated/source/buildConfig/androidTest/debug/com/findeway/floatingsatellitemenu/test/BuildConfig.java" />
         <option value="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/java/com/findeway/floatingsatellitemenu/Samples/SMMainActivity.java" />
         <option value="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/floatingsatellitemenu/floatingsatellitemenu.iml" />
+        <option value="$PROJECT_DIR$/floatingsatellitemenu/src/main/java/com/findeway/floatingsatellitemenu/SatelliteMenu.java" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
       </list>
     </option>
   </component>
@@ -2840,16 +2803,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SatelliteMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3184,10 +3138,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3318,6 +3268,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SatelliteMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3331,14 +3294,14 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="android.project.structure.last.selected" value="FloatingSatelliteMenu-Samples" />
+    <property name="android.project.structure.last.selected" value="floatingsatellitemenu" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="buildconfig&#9;PSI&#9;JAVA://com.findeway.floatingsatellitemenu.test.BuildConfig&#10;buildcon&#9;PSI&#9;JAVA://com.findeway.FloatingSatelliteMenu.Samples.BuildConfig&#10;R.&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/FloatingSatelliteMenu-Samples/build/generated/source/r/debug/com/findeway/FloatingSatelliteMenu/R.java&#10;iml&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/app/app.iml&#10;onpos&#9;PSI&#9;JAVA://com.findeway.SatelliteMenu.view.FloatButton#setOnPositionUpdateListener&#10;onposition&#9;PSI&#9;JAVA://com.findeway.SatelliteMenu.view.FloatButton.OnPositionUpdateListener#onPositionUpdate&#10;onpo&#9;PSI&#9;JAVA://com.findeway.SatelliteMenu.view.FloatButton.OnPositionUpdateListener&#10;attrs&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/app/src/main/res/values/attrs.xml&#10;.iml&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/satellitemenu.iml&#10;styles&#9;FILE&#9;file://E:/workspace/Android/satellitemenu/app/src/main/res/values/styles.xml&#10;attr&#9;FILE&#9;file://E:/workspace/Android/satellitemenu/app/src/main/res/values/attrs.xml" />
+    <property name="SearchEverywhereHistoryKey" value="modules.xm&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/.idea/modules.xml&#10;buildconfig&#9;PSI&#9;JAVA://com.findeway.floatingsatellitemenu.test.BuildConfig&#10;buildcon&#9;PSI&#9;JAVA://com.findeway.FloatingSatelliteMenu.Samples.BuildConfig&#10;R.&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/FloatingSatelliteMenu-Samples/build/generated/source/r/debug/com/findeway/FloatingSatelliteMenu/R.java&#10;iml&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/app/app.iml&#10;onpos&#9;PSI&#9;JAVA://com.findeway.SatelliteMenu.view.FloatButton#setOnPositionUpdateListener&#10;onposition&#9;PSI&#9;JAVA://com.findeway.SatelliteMenu.view.FloatButton.OnPositionUpdateListener#onPositionUpdate&#10;onpo&#9;PSI&#9;JAVA://com.findeway.SatelliteMenu.view.FloatButton.OnPositionUpdateListener&#10;attrs&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/app/src/main/res/values/attrs.xml&#10;.iml&#9;FILE&#9;file://E:/workspace/Android/SatelliteMenu/satellitemenu.iml&#10;styles&#9;FILE&#9;file://E:/workspace/Android/satellitemenu/app/src/main/res/values/styles.xml&#10;attr&#9;FILE&#9;file://E:/workspace/Android/satellitemenu/app/src/main/res/values/attrs.xml" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
@@ -3549,7 +3512,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -3681,17 +3644,17 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3041958" sideWeight="0.45931476" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30384168" sideWeight="0.45717344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39231664" sideWeight="0.50214136" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30384168" sideWeight="0.54282653" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282887" sideWeight="0.49357602" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39231664" sideWeight="0.49785867" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39231664" sideWeight="0.49571735" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24678801" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -3733,7 +3696,8 @@
     <MESSAGE value="change samples dir" />
     <MESSAGE value="fix childview setvisibility to GONE does not work after start animation;" />
     <MESSAGE value="fix wrong coordinate of the starting pos of menu item animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix wrong coordinate of the starting pos of menu item animation" />
+    <MESSAGE value="add alpha animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add alpha animation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -3742,22 +3706,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/AndroidSDK/platforms/android-17/android.jar!/android/view/ViewGroup.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3993,13 +3941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/floatingsatellitemenu/floatingsatellitemenu.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/res/layout/activity_smmain.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4026,17 +3967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/floatingsatellitemenu/src/main/java/com/findeway/floatingsatellitemenu/SatelliteMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="85" selection-start-line="102" selection-start-column="85" selection-end-line="102" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4052,7 +3982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4114,11 +4043,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/src/main/java/com/findeway/floatingsatellitemenu/Samples/SMMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9406953">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/floatingsatellitemenu/floatingsatellitemenu.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="43" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/AndroidSDK/platforms/android-17/android.jar!/android/view/animation/AlphaAnimation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.44">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/floatingsatellitemenu/src/main/java/com/findeway/floatingsatellitemenu/SatelliteMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="322" column="52" selection-start-line="322" selection-start-column="52" selection-end-line="322" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20353982">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
