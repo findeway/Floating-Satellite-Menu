@@ -283,6 +283,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
     protected void doChildrenToggleAnimation(int duration){
         int childCount = getChildCount();
         for(int childIndex = 1; childIndex < childCount; childIndex++){
+            View childView = getChildAt(childIndex);
             AnimationSet animationSet = new AnimationSet(true);
             //rotate
             RotateAnimation rotateAnimation = new RotateAnimation(0f, 720f, Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF,0.5f);
@@ -305,8 +306,8 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
             }
             int endX = 0;
             int endY = 0;
-            int deltaX = mSwitchButton.getWidth() / 2;
-            int deltaY = mSwitchButton.getHeight() / 2;
+            int deltaX = mSwitchButton.getWidth() / 2 - childView.getWidth()/2;
+            int deltaY = mSwitchButton.getHeight() / 2 - childView.getHeight()/2;
 
             if(isMenuClosed()){
                 //to expand
@@ -320,7 +321,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
             translateAnimation.setStartOffset(childIndex * 100 / childCount);
             animationSet.addAnimation(translateAnimation);
             //start animation
-            getChildAt(childIndex).startAnimation(animationSet);
+            childView.startAnimation(animationSet);
 
         }
     }
