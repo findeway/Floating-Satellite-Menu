@@ -86,6 +86,8 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
      */
     private int mRadius = 50;
 
+    private boolean mRotateSwitchButton = true;
+
     private FloatButton mSwitchButton = null;
 
     private OnMenuItemClickListener mMenuItemClickListener = null;
@@ -103,6 +105,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
         mRadius = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 150, getResources().getDisplayMetrics());
         TypedArray attributeArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.SatelliteMenu, defStyleAttr, 0);
         mSwitchPosition = MenuPosition.fromInt(attributeArray.getInt(R.styleable.SatelliteMenu_position, MenuPosition.MenuPosition_RB.getValue()));
+        mRotateSwitchButton = attributeArray.getBoolean(R.styleable.SatelliteMenu_rotateSwitch, mRotateSwitchButton);
         attributeArray.recycle();
     }
 
@@ -250,7 +253,7 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
     }
 
     protected void doToggleAnimation(int duration){
-        if (mSwitchButton != null) {
+        if (mSwitchButton != null && mRotateSwitchButton) {
             rotateSwitchButton(mSwitchButton, 0f, 360f, duration);
         }
         doChildrenToggleAnimation(duration);
