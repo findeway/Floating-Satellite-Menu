@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FloatingSatelliteMenu-Samples/FloatingSatelliteMenu-Samples.iml" filepath="$PROJECT_DIR$/FloatingSatelliteMenu-Samples/FloatingSatelliteMenu-Samples.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SatelliteMenu.iml" filepath="$PROJECT_DIR$/SatelliteMenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/floatingsatellitemenu/floatingsatellitemenu.iml" filepath="$PROJECT_DIR$/floatingsatellitemenu/floatingsatellitemenu.iml" />
     </modules>
   </component>

@@ -3,6 +3,7 @@ package com.findeway.floatingsatellitemenu.Samples;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.findeway.floatingsatellitemenu.SatelliteMenu;
 
@@ -17,7 +18,7 @@ public class SMMainActivity extends Activity implements SatelliteMenu.OnMenuItem
     }
 
     @Override
-    public void OnMenuItemClick(int itemId) {
+    public void OnMenuItemClick(int itemId, View view) {
         Log.i("item clicked", String.valueOf(itemId));
     }
 }

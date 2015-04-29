@@ -404,20 +404,23 @@ public class SatelliteMenu extends ViewGroup implements FloatButton.OnPositionUp
     protected void registerChildClickListener(){
         for(int childIndex = 1; childIndex < getChildCount(); childIndex++){
             final int finalChildIndex = childIndex;
-            getChildAt(childIndex).setOnClickListener(new OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if(mMenuItemClickListener != null) {
-                        mMenuItemClickListener.OnMenuItemClick(finalChildIndex);
+            final View childView = getChildAt(childIndex);
+            if(childView != null) {
+                childView.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (mMenuItemClickListener != null) {
+                            mMenuItemClickListener.OnMenuItemClick(finalChildIndex, childView);
+                        }
+                        doMenuItemClickAnimation(finalChildIndex);
+                        hideMenuItems();
                     }
-                    doMenuItemClickAnimation(finalChildIndex);
-                    hideMenuItems();
-                }
-            });
+                });
+            }
         }
     }
 
     public interface OnMenuItemClickListener {
-        public void OnMenuItemClick(int itemId);
+        public void OnMenuItemClick(int itemId,View view);
     }
 }
